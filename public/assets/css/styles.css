@@ -1,3 +1,59 @@
-h1 {
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    height: 50px;
+    background-color: beige;
+    padding: 10px;
+    display: flex;
+}
+
+header nav {
+    width: 100vw;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin: 5px;
+}
+
+main {
+    padding: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #999;
+}
+
+header nav ul li a:hover {
+    color: #333;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 5px;
+    width: 150px;
+
+}
+
+.card p {
+    font-size: 1.2em;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
 }
