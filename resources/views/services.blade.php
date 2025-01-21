@@ -3,11 +3,23 @@
 
 @section('content')
     <h1>Our Services</h1>
-    <p>Here is a list of services we offer:</p>
-    <ul>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
-    </ul>
+
+    @component('_components.card')
+        @slot('title')
+            Service 1
+        @endslot
+
+        @slot('content')
+            This is the content for service 1
+        @endslot
+
+    @endcomponent
+
+    @component('_components.card')
+        @slot('title', 'Service 2')
+
+        @slot('content', 'This is the content for service 2')
+
+    @endcomponent
 
 @endsection
