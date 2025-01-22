@@ -1,13 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
-//metedo estatico para pintar una vista sin necesidad de un controlador
-//solo aplica siempre que sea una vista estatica
-Route::view('/', 'index')->name('index');
+//static views
+
+/* Route::view('/', 'index')->name('index');
 Route::view('/about-us', 'about')->name('about');
 Route::view('/out-services', 'services')->name('services');
-Route::view('/contact-us', 'contact')->name('contact');
+Route::view('/contact-us', 'contact')->name('contact'); */
+
+
+//method to get a view with a controller
+Route::get('/', [UserController::class, 'index'])->name('index');
 
 
 
