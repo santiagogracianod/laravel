@@ -16,6 +16,7 @@ return new class extends Migration
             //string is a column type, 255 is the length of the column
             $table->string('title', 255);
             $table->string('description', 255)->nullable();
+            $table->date('deadline')->nullable();
             $table->boolean('is_done')->default(false);
 
             //other values
