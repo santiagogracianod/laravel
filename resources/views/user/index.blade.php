@@ -5,11 +5,11 @@
 @section('content')
     <h1>Users list</h1>
     <ul>
-        @if ($users->isEmpty())
+        @if (count($users) === 0)
             <h4>No users found</h4>
         @else
             @foreach ($users as $user)
-                <li>{{ $user->name }}</li>
+                <li>{{ $user->name }} -- {{ $user->age }} years old</li>
             @endforeach
 
         @endif
