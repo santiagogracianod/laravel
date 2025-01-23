@@ -12,7 +12,8 @@ Route::view('/contact-us', 'contact')->name('contact');
 
 
 //method to get a view with a controller
-Route::get('/users', [UserController::class, 'index'])->name('index');
+Route::get('/users', [UserController::class, 'index'])->name('user.index');
+Route::get('/users/create', [UserController::class, 'create'])->name('user.create');
 
 
 
